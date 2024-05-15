@@ -1,2 +1,2 @@
-# pygame_plus
+# pygame+
 Python library for facilitating work with PyGame
