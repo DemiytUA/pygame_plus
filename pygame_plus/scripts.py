@@ -216,7 +216,7 @@ def dialog_text(text, font, text_color, fone_color, x, y, w, h, scr, pg):
     pg.draw.rect(scr, fc, (x+3, y+3, w-6, h-6))
     for q in range(s):
         text = font.render(texts[q], True, text_color)
-        scr.blit(text, (x+x/90, 15*q+(y+y/1.3)))
+        scr.blit(text, (x+x/90, 15*q+(y+y)))
 
 def next_to(player_x, player_y, obj_x, obj_y, min_distance):
     minpx, maxpx = (min(player_x, obj_x), max(player_x, obj_x))
@@ -254,7 +254,7 @@ def pluspos(poss, plus):
 
     return wpos
 
-def darkened_screen(width, height, pg, scr, timew):
+def darkened_screen(width, height, pg, scr, timew=0.01):
     alfs = pg.Surface((width, height), pg.SRCALPHA)
     for alf in range(0, 150):
         alfs.fill((0, 0, 0, alf))
